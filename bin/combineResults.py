@@ -35,7 +35,6 @@ def generate_ms3data(ms3input, full_dict):
         for line in input_file:
             line = line.strip()
             if line.startswith("BEGIN IONS"):
-                add = False
                 in_spectra = True
             elif in_spectra and line.startswith("END IONS"):
                 in_spectra = False
@@ -43,7 +42,6 @@ def generate_ms3data(ms3input, full_dict):
                     spectra[smile]["Actual"][scan] = ms2_peak
                 except:
                     spectra[smile] = {"Actual" : {scan : ms2_peak}}
-                add = False
                 full_dict[scan] = [ms2_peak, smile, col_energies, adduct, masses]
             elif in_spectra and line.startswith("SMILES"):
                 smile = line[7:]
@@ -99,8 +97,9 @@ def check_substructure(refactored_data, ms2scans, output):
 
 
             try:
-                ms2_scan = int(getscan(smile_adduct[0], smile_adduct[1], spectra["Energies"][0])[0], ms2scans)
+                ms2_scan = int(getscan(smile_adduct[0], smile_adduct[1], spectra["Energies"][0], ms2scans)[0])
             except:
+
                 ms2_scan = "Not found scan"
             
             try:
@@ -128,7 +127,7 @@ def main():
 
     args = parser.parse_args()
 
-    ms2scans = pd.read_csv(args.ms2scans)
+    ms2scans = pd.read_json(args.ms2scans, orient = 'records')
     generate_ms3data(args.ms3input, full_dict)
     combine_results(json_data, full_dict, refactored_data)
     check_substructure(refactored_data, ms2scans, args.output_filename)
