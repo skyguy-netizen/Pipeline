@@ -1,3 +1,7 @@
 *.ipynb_checkpoints*
 *.env
 *credentials
+nf_output/*
+work/*
+.nextflow.log*
+data/*.mgf

@@ -11,10 +11,10 @@ def get_elements(smile):
     except:
         return defaultdict(int)
     elements = re.findall(r'([A-Z][a-z]*)(\d*)', formula)
-    elements = defaultdict(int)
+    element_counts = defaultdict(int)
     for element, count in elements:
-        elements[element] = count
-    return elements
+        element_counts[element] += int(count) if count else 1
+    return element_counts
 
 def get_formula(mol):
     return c.CalcMolFormula(mol)
