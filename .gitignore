@@ -3,5 +3,6 @@
 *credentials
 nf_output/*
 work/*
+.nextflow/*
 .nextflow.log*
 data/*.mgf
