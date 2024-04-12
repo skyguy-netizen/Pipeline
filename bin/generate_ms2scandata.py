@@ -48,7 +48,7 @@ def main():
     df = pd.DataFrame(generate_ms2data(args.input_filename))
     df = df.sort_values(by = "Energies").reset_index(drop = True)
     ms2scans = df.groupby(["Smile", "Adduct", "Energies"])["Scan"].apply(list).reset_index()
-    ms2scans.to_csv(args.output_filename)
+    ms2scans.to_json(args.output_filename, orient = 'records')
 
 
 if __name__ == "__main__":
