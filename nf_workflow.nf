@@ -32,11 +32,10 @@ process extractMS3data {
     file input
 
     output:
-    // file "intermediate_${task.index}.mgf"
     file "ms3.mgf"
 
     """
-    python $TOOL_FOLDER/extractandformatms3.py $input intermediate_${task.index}.mgf ms3.mgf
+    python $TOOL_FOLDER/extractandformatms3.py $input ms3.mgf
     """
 }
 
@@ -121,6 +120,44 @@ process checkSubFormula {
     """
 }
 
+process generateSpectraData {
+    publishDir "./nf_output", mode: 'copy'
+
+    conda "$TOOL_FOLDER/conda_env.yml"
+
+    input:
+    file mgf
+
+    output:
+    file 'ms2spectradata.json'
+
+    """
+    python $TOOL_FOLDER/generate_ms2spectradata.py $mgf ms2spectradata.json
+    """
+}
+
+process addSpectraData {
+    publishDir "./nf_output", mode: 'copy'
+
+    conda "$TOOL_FOLDER/conda_env.yml"
+
+    input:
+    file tree
+    file spectradata
+
+    output:
+    file tree
+
+    """
+    python $TOOL_FOLDER/addms2spectradata.py $tree $spectradata
+    """
+}
+
+
+{
+    """
+    nextflow run ${} --"""
+}
 workflow {
     data = Channel.fromPath(params.input_merge, checkIfExists:true)
 
@@ -128,8 +165,9 @@ workflow {
     ms3 = extractMS3data(results.collate(1))
     count = counts(results.collate(1))
     workflow = generate_ms2scandata(results.collate(1))
+    spectradata = generateSpectraData(results.collate(1))
     combined_data = combineWorkflowResults(workflow.collate(1), ms3.collate(1))
     uniq_data = removeDuplicates(combined_data.collate(1))
-    checkSubFormula(uniq_data.collate(1))
-
+    tree = checkSubFormula(uniq_data.collate(1))
+    final_tree = addSpectraData(tree.collate(1), spectradata.collate(1))
 }

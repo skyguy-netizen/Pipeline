@@ -1,0 +1,62 @@
+2024-04-05 19:12:35	39.4s	infallible_kirch	OK	4a29830ec10ebab2d781ced2d9783936	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-05 19:21:47	2.2s	chaotic_rutherford	OK	da401a650891b70229d9b70043edb2e2	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-05 19:22:37	2.5s	festering_goldstine	OK	da401a650891b70229d9b70043edb2e2	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-05 19:24:22	3.1s	cranky_moriondo	OK	da401a650891b70229d9b70043edb2e2	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-05 19:42:11	2.1s	confident_ritchie	ERR	153a465649ae4eb9736b8d9b6c16ffdb	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-05 19:42:58	56.3s	crazy_mayer	ERR	f83b2017a9d20a2251eb3af417dcfb57	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-05 19:44:40	19.1s	agitated_kalam	OK	9149e76a1e1bcc39a7e6a56b45ba4928	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-05 20:14:56	4.5s	pensive_kirch	ERR	cbc3bc0f8000478105caa660908b6a19	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-05 20:18:44	22.6s	nostalgic_brazil	ERR	a24813cdeab1f8e3d1c713f1eca7a129	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-05 21:10:01	24.8s	prickly_wiles	OK	d052ba0b4475ab2e52dee3a0e58aa874	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-05 21:23:08	12.9s	compassionate_roentgen	ERR	a24813cdeab1f8e3d1c713f1eca7a129	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-05 21:24:08	40.2s	ridiculous_wiles	OK	f52846799e957273692e7a274d93399b	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-08 22:21:02	-	grave_booth	-	3ee8369caa19aafa5b20c49dc918d9e5	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-08 22:21:44	16.7s	high_nightingale	ERR	5cd3b1892169b264fdca294e794c9e16	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-08 22:25:03	-	intergalactic_darwin	-	46be7e15ba273cbc1fe402f749e76657	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-08 22:25:19	-	voluminous_colden	-	7ee093478c11acd4b339531ba5511bd5	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-08 22:25:34	2.7s	mad_lorenz	ERR	4279a554d4e878cc1e2b10a9ca85edd9	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-08 22:26:13	5.8s	elated_marconi	ERR	6e6b9cd47eb91996a62bf23f1b24c7cd	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-08 22:28:22	45.1s	adoring_waddington	ERR	82b0badf5869590d69c2c6321c986b44	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-08 22:30:24	6.3s	big_jones	ERR	d6e08efd59635407b69626e69c0e40e7	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-08 22:31:14	6.4s	pedantic_church	ERR	a78a68f196e48f871e75bfc1524ac25a	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-08 22:32:28	6.1s	happy_kowalevski	ERR	a78a68f196e48f871e75bfc1524ac25a	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-08 22:34:16	6s	astonishing_hamilton	ERR	6155f2fbe74f7609e0fc71ede42193da	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-08 22:35:04	45.1s	pensive_gates	ERR	6155f2fbe74f7609e0fc71ede42193da	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-08 23:05:35	49.5s	gigantic_faggin	OK	928d5319efd81145119fe5635ec63ac3	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-08 23:11:09	-	zen_mccarthy	-	06249bc86cc8665257ce31e8a47fe936	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-08 23:11:26	6s	shrivelled_varahamihira	ERR	a92a9dacc9a99cb59c3647f701615174	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-08 23:14:47	2m 15s	friendly_boyd	OK	a92a9dacc9a99cb59c3647f701615174	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-08 23:22:33	2.5s	insane_meucci	ERR	a92a9dacc9a99cb59c3647f701615174	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-08 23:53:43	-	cranky_ritchie	-	313140e2b6d6b0792064bb4fd8771b7d	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-08 23:55:01	-	nice_brown	-	06249bc86cc8665257ce31e8a47fe936	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-08 23:55:32	1m 1s	naughty_rubens	ERR	a92a9dacc9a99cb59c3647f701615174	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-09 00:01:25	1m 33s	reverent_swanson	ERR	a92a9dacc9a99cb59c3647f701615174	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-09 00:04:07	2m	nice_gauss	OK	a92a9dacc9a99cb59c3647f701615174	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-09 12:32:25	2.1s	confident_carlsson	ERR	a92a9dacc9a99cb59c3647f701615174	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-09 12:32:52	1m 5s	distraught_panini	OK	a92a9dacc9a99cb59c3647f701615174	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-09 12:35:39	2.6s	happy_archimedes	OK	a92a9dacc9a99cb59c3647f701615174	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-09 12:38:00	3s	boring_woese	OK	a92a9dacc9a99cb59c3647f701615174	b17e20c7-acab-422a-aaf1-60003962551f	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-09 12:38:28	1m 3s	awesome_pare	OK	a92a9dacc9a99cb59c3647f701615174	002b8d03-562d-4f90-a1e3-65efb1e1d5a1	nextflow run ./nf_workflow.nf -c nextflow.config
+2024-04-09 12:41:07	13.8s	maniac_austin	ERR	a92a9dacc9a99cb59c3647f701615174	320990dc-ff04-47e0-bd3c-f5cbfa60e9dc	nextflow run ./nf_workflow.nf -c nextflow.config
+2024-04-09 13:11:12	2m 14s	chaotic_lorenz	OK	a7643ddfe614be7567603fd3c911418e	320990dc-ff04-47e0-bd3c-f5cbfa60e9dc	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-09 17:22:53	6.8s	astonishing_babbage	OK	5c452eda18e28f28ef373d45430e8a2f	320990dc-ff04-47e0-bd3c-f5cbfa60e9dc	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-09 17:56:35	2m 22s	irreverent_wilson	OK	5c452eda18e28f28ef373d45430e8a2f	320990dc-ff04-47e0-bd3c-f5cbfa60e9dc	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-09 18:47:39	-	drunk_hamilton	-	e0acaf75cba7adb74d4c3ed067996ab0	320990dc-ff04-47e0-bd3c-f5cbfa60e9dc	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-09 18:48:27	-	kickass_mirzakhani	-	4353cab5825d1ff8ebc40beb170a6c8e	320990dc-ff04-47e0-bd3c-f5cbfa60e9dc	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-09 18:48:50	6s	nasty_church	ERR	7ad63bc666f49ce92538bfa1dcafc6cc	320990dc-ff04-47e0-bd3c-f5cbfa60e9dc	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-09 18:49:26	6.1s	soggy_lorenz	ERR	7ad63bc666f49ce92538bfa1dcafc6cc	320990dc-ff04-47e0-bd3c-f5cbfa60e9dc	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-09 18:52:31	5.4s	thirsty_heyrovsky	ERR	7ad63bc666f49ce92538bfa1dcafc6cc	320990dc-ff04-47e0-bd3c-f5cbfa60e9dc	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-09 18:53:18	5.6s	prickly_ardinghelli	ERR	7ad63bc666f49ce92538bfa1dcafc6cc	320990dc-ff04-47e0-bd3c-f5cbfa60e9dc	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-09 21:56:10	2m 32s	crazy_crick	OK	7ad63bc666f49ce92538bfa1dcafc6cc	320990dc-ff04-47e0-bd3c-f5cbfa60e9dc	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-09 23:08:04	2m 25s	special_hypatia	OK	7ad63bc666f49ce92538bfa1dcafc6cc	320990dc-ff04-47e0-bd3c-f5cbfa60e9dc	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-10 16:44:30	5.8s	fervent_dubinsky	ERR	dfa24ab4b5369b10b37c9ec26d8882b3	320990dc-ff04-47e0-bd3c-f5cbfa60e9dc	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-10 16:45:22	22.8s	golden_mirzakhani	ERR	dfa24ab4b5369b10b37c9ec26d8882b3	320990dc-ff04-47e0-bd3c-f5cbfa60e9dc	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-10 16:46:06	1m 18s	boring_elion	OK	dfa24ab4b5369b10b37c9ec26d8882b3	320990dc-ff04-47e0-bd3c-f5cbfa60e9dc	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-10 17:56:28	4.3s	elated_poincare	OK	dfa24ab4b5369b10b37c9ec26d8882b3	320990dc-ff04-47e0-bd3c-f5cbfa60e9dc	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-10 18:09:31	3.7s	awesome_swanson	OK	012430a32bac70801f9cd110f4944c46	320990dc-ff04-47e0-bd3c-f5cbfa60e9dc	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-10 18:13:06	5.1s	kickass_chandrasekhar	ERR	b92250361c803068759cd180bf0920a2	320990dc-ff04-47e0-bd3c-f5cbfa60e9dc	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-10 18:14:41	4.8s	marvelous_bhaskara	OK	6f12fc021ebdb08bc60bbff0658f34af	320990dc-ff04-47e0-bd3c-f5cbfa60e9dc	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-10 18:38:26	1m 7s	gloomy_kay	ERR	6f12fc021ebdb08bc60bbff0658f34af	320990dc-ff04-47e0-bd3c-f5cbfa60e9dc	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-10 18:41:22	1m 42s	disturbed_wozniak	OK	6f12fc021ebdb08bc60bbff0658f34af	320990dc-ff04-47e0-bd3c-f5cbfa60e9dc	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-10 18:44:27	2m 35s	sharp_dubinsky	ERR	6f12fc021ebdb08bc60bbff0658f34af	320990dc-ff04-47e0-bd3c-f5cbfa60e9dc	nextflow run ./nf_workflow.nf -resume -c nextflow.config
+2024-04-10 18:53:40	11.8s	jolly_neumann	OK	6f12fc021ebdb08bc60bbff0658f34af	320990dc-ff04-47e0-bd3c-f5cbfa60e9dc	nextflow run ./nf_workflow.nf -resume -c nextflow.config

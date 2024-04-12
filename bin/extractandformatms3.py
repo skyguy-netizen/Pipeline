@@ -1,6 +1,4 @@
 import argparse
-import json
-
 
 def extractms3(input, intermediate):
     with open(input, 'r') as input_file, open(intermediate, 'w') as output_file:
@@ -68,12 +66,11 @@ def formatms3(intermediate, output):
 def main():
     parser = argparse.ArgumentParser(description='Test write out a file.')
     parser.add_argument('input_filename')
-    parser.add_argument('intermediate_filename')
     parser.add_argument('output_filename')
 
     args = parser.parse_args()
-    extractms3(args.input_filename, args.intermediate_filename)
-    formatms3(args.intermediate_filename, args.output_filename)
+    extractms3(args.input_filename, 'intermediate.json')
+    formatms3('intermediate.json', args.output_filename)
 
 if __name__ == "__main__":
     main()
