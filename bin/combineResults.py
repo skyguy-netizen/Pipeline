@@ -64,7 +64,7 @@ def generate_ms3data(ms3input, full_dict):
 
 def combine_results(workflowdata, full_dict, refactored_data):
     for data_list in workflowdata:
-        scan_num = data_list['#Scan#']
+        scan_num = str(data_list['#Scan#'])
         pred_smile = data_list["Smiles"]
         
         smile = full_dict[scan_num][1]
@@ -115,21 +115,22 @@ def check_substructure(refactored_data, ms2scans, output):
 
 
 def main():
-    response = requests.get(url)
-    json_data = response.json()
+    
     full_dict = {}  
     refactored_data = {}
     
     parser = argparse.ArgumentParser(description='Test write out a file.')
     parser.add_argument('ms3input')
     parser.add_argument('ms2scans')
+    parser.add_argument('workflow_results')
     parser.add_argument('output_filename')
 
     args = parser.parse_args()
 
     ms2scans = pd.read_json(args.ms2scans, orient = 'records')
+    workflow_data = pd.read_table(args.workflow_results, sep = '\t').to_dict(orient = 'records')
     generate_ms3data(args.ms3input, full_dict)
-    combine_results(json_data, full_dict, refactored_data)
+    combine_results(workflow_data, full_dict, refactored_data)
     check_substructure(refactored_data, ms2scans, args.output_filename)
 
 

@@ -1,10 +1,15 @@
 #!/usr/bin/env nextflow
 nextflow.enable.dsl=2
 
+include { LibrarySearch } from "$baseDir/LibrarySearch_Workflow/nf_workflow.nf"
+
 params.input_merge = "$baseDir/data/*.mgf"
+params.inputlibraries = "$baseDir/data/libraries"
+params.inputspectra = "$baseDir/data/spectra"
 
 TOOL_FOLDER = "$baseDir/bin"
 INPUT_FOLDER = "$baseDir/data"
+OUTPUT_FOLDER = "$baseDir/nf_output"
 
 process processOriginalMGF {
     publishDir "./nf_output", mode: 'copy'
@@ -24,7 +29,7 @@ process processOriginalMGF {
 
 
 process extractMS3data {
-    publishDir "./nf_output", mode: 'copy'
+    publishDir "./data/spectra", mode: 'copy'
 
     conda "$TOOL_FOLDER/conda_env.yml"
 
@@ -79,12 +84,13 @@ process combineWorkflowResults {
     input:
     file ms2scandata
     file ms3
+    file workflowResults
 
     output:
     file 'combined_data.json'
 
     """
-    python $TOOL_FOLDER/combineResults.py $ms3 $ms2scandata combined_data.json
+    python $TOOL_FOLDER/combineResults.py $ms3 $ms2scandata $workflowResults combined_data.json
     """
 }
 
@@ -154,19 +160,30 @@ process addSpectraData {
 }
 
 
-{
-    """
-    nextflow run ${} --"""
-}
+// process addWorkflowFiles {
+//     publishDir "./nf_output", mode: 'copy'
+
+//     conda "$TOOL_FOLDER/conda_env.yml"
+
+//     input:
+//     file ms3
+    
+//     """
+//     cd $baseDir/data
+//     bash $baseDir/LibrarySearch_Workflow/data/get_data.sh
+//     mv $baseDir/nf_output/$ms3 $INPUT_FOLDER/spectra/
+//     """
+// }
+
 workflow {
     data = Channel.fromPath(params.input_merge, checkIfExists:true)
-
     results = processOriginalMGF(data)
-    ms3 = extractMS3data(results.collate(1))
+    ms3 = extractMS3data(results.collate(1))    
+    workflowResults = LibrarySearch(ms3.collate(1))
     count = counts(results.collate(1))
     workflow = generate_ms2scandata(results.collate(1))
     spectradata = generateSpectraData(results.collate(1))
-    combined_data = combineWorkflowResults(workflow.collate(1), ms3.collate(1))
+    combined_data = combineWorkflowResults(workflow.collate(1), ms3.collate(1), workflowResults.collate(1))
     uniq_data = removeDuplicates(combined_data.collate(1))
     tree = checkSubFormula(uniq_data.collate(1))
     final_tree = addSpectraData(tree.collate(1), spectradata.collate(1))
