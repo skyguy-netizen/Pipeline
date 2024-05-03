@@ -10,6 +10,18 @@ To learn NextFlow checkout this documentation:
 
 https://www.nextflow.io/docs/latest/index.html
 
+## To run the PIPELINE
+
+Make sure the mgf file you want to work with is under data and has the extensions `.mgf`
+
+Then, just run the script `run.sh` if you have everything installed properly
+
+The script gets all the library files and stores them under `data/libraries/`
+
+The script will also run the pipeline twice to finish the library search workflow (some issues with this hence it has to run twice)
+
+The final result tree (in json format) is in `nf_output/final_tree.json`
+
 ## Installation
 
 You will need to have conda, mamba, and nextflow installed to run things locally. 
