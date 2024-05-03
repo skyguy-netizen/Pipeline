@@ -1,5 +1,5 @@
 cd data
 bash get_data.sh
-cd ../`
+cd ../
 make run
 make run
