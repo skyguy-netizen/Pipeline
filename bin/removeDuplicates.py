@@ -3,12 +3,15 @@ from rdkit import Chem
 import json
 
 def is_same(smile1, smile2):
-    if smile2 is None:
+    if smile2 == float('nan') :
         return True
     
     # Convert SMILES strings to RDKit molecules
-    molecule1 = Chem.MolFromSmiles(smile1)
-    molecule2 = Chem.MolFromSmiles(smile2)
+    try:
+        molecule1 = Chem.MolFromSmiles(smile1)
+        molecule2 = Chem.MolFromSmiles(smile2)
+    except:
+        return True
 
     if not molecule1 and not molecule2:
         return True
@@ -28,6 +31,10 @@ def removeDuplicates(tree):
             for scan in ms3_scans:
                 add = True
                 for j in new_scans:
+                    # print()
+                    # print()
+                    # print(type(scan['PredSmile']))
+                    # print(j)
                     if is_same(j['PredSmile'], scan['PredSmile']):
                         j['Substructure?'] = j['Substructure?'] or scan['Substructure?']
                         add = False

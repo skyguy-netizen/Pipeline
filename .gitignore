@@ -1,4 +1,4 @@
-
+.nextflow/
 *.env
 *credentials
 nf_output/*

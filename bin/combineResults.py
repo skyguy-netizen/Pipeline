@@ -1,7 +1,6 @@
 import argparse
 import pandas as pd
 import json
-import requests
 from rdkit import Chem
 
 url = "https://gnps2.org/result?task=121341ce6b534fff8bb7898720923a7c&viewname=summarylist&json"
@@ -126,6 +125,8 @@ def main():
     parser.add_argument('output_filename')
 
     args = parser.parse_args()
+    print("------")
+    print(args.ms2scans)
 
     ms2scans = pd.read_json(args.ms2scans, orient = 'records')
     workflow_data = pd.read_table(args.workflow_results, sep = '\t').to_dict(orient = 'records')
